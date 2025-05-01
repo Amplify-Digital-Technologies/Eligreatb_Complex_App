@@ -2,4 +2,13 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/eligtzsr/public_html/
-    - /bin/rsync -av --exclude='.git/' --exclude='.cpanel.yml' --exclude='README.md' ./ "$DEPLOYPATH"
+    - /bin/cp -R assets "$DEPLOYPATH"
+    - /bin/cp index.html "$DEPLOYPATH"
+    - /bin/cp about.html "$DEPLOYPATH"
+    - /bin/cp contact.html "$DEPLOYPATH"
+    - /bin/cp blog.html "$DEPLOYPATH"
+    - /bin/cp coming-soon.html "$DEPLOYPATH"
+    - /bin/cp music.html "$DEPLOYPATH"
+    - /bin/cp privacy.html "$DEPLOYPATH"
+    - /bin/cp video.html "$DEPLOYPATH"
+    - /bin/cp 404.html "$DEPLOYPATH"
